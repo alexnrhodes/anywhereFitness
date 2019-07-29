@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3836FCD722EF9BA2002C07EE /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCD622EF9BA2002C07EE /* Trainer.swift */; };
+		3836FCD922EF9BB9002C07EE /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCD822EF9BB9002C07EE /* Client.swift */; };
+		3836FCDC22EF9CA8002C07EE /* ClassPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCDB22EF9CA8002C07EE /* ClassPack.swift */; };
+		3836FCDE22EF9DB5002C07EE /* ClientLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCDD22EF9DB5002C07EE /* ClientLoginViewController.swift */; };
+		3836FCE022EF9DCB002C07EE /* ClientSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCDF22EF9DCB002C07EE /* ClientSignUpViewController.swift */; };
+		3836FCE222EF9DDB002C07EE /* TrainerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCE122EF9DDB002C07EE /* TrainerLoginViewController.swift */; };
+		3836FCE422EF9E06002C07EE /* TrainerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCE322EF9E06002C07EE /* TrainerSignUpViewController.swift */; };
+		3836FCE622EF9E4D002C07EE /* ClassSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCE522EF9E4D002C07EE /* ClassSearchViewController.swift */; };
+		3836FCE822EF9E6B002C07EE /* ClassSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCE722EF9E6B002C07EE /* ClassSearchDetailViewController.swift */; };
+		3836FCEA22EFA194002C07EE /* PurchasedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCE922EFA194002C07EE /* PurchasedTableViewCell.swift */; };
+		3836FCEC22EFA1BB002C07EE /* ClassSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCEB22EFA1BB002C07EE /* ClassSearchTableViewCell.swift */; };
+		3836FCF022EFA36B002C07EE /* PurchasedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCEF22EFA36B002C07EE /* PurchasedTableViewController.swift */; };
+		3836FCF222EFA397002C07EE /* PurchasedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCF122EFA397002C07EE /* PurchasedDetailViewController.swift */; };
+		3836FCF722EFA47B002C07EE /* AddClassPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCF622EFA47B002C07EE /* AddClassPackViewController.swift */; };
+		3836FCFC22EFAC28002C07EE /* ClassPackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCFB22EFAC28002C07EE /* ClassPackTableViewController.swift */; };
+		3836FCFE22EFAC8C002C07EE /* ClassPackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCFD22EFAC8C002C07EE /* ClassPackTableViewCell.swift */; };
 		38D2851E22EDFB4400B1A232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2851D22EDFB4400B1A232 /* AppDelegate.swift */; };
-		38D2852022EDFB4400B1A232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2851F22EDFB4400B1A232 /* ViewController.swift */; };
 		38D2852322EDFB4400B1A232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2852122EDFB4400B1A232 /* Main.storyboard */; };
 		38D2852522EDFB4600B1A232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2852422EDFB4600B1A232 /* Assets.xcassets */; };
 		38D2852822EDFB4600B1A232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2852622EDFB4600B1A232 /* LaunchScreen.storyboard */; };
@@ -16,9 +31,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3836FCD622EF9BA2002C07EE /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		3836FCD822EF9BB9002C07EE /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		3836FCDB22EF9CA8002C07EE /* ClassPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPack.swift; sourceTree = "<group>"; };
+		3836FCDD22EF9DB5002C07EE /* ClientLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLoginViewController.swift; sourceTree = "<group>"; };
+		3836FCDF22EF9DCB002C07EE /* ClientSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSignUpViewController.swift; sourceTree = "<group>"; };
+		3836FCE122EF9DDB002C07EE /* TrainerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginViewController.swift; sourceTree = "<group>"; };
+		3836FCE322EF9E06002C07EE /* TrainerSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerSignUpViewController.swift; sourceTree = "<group>"; };
+		3836FCE522EF9E4D002C07EE /* ClassSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchViewController.swift; sourceTree = "<group>"; };
+		3836FCE722EF9E6B002C07EE /* ClassSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchDetailViewController.swift; sourceTree = "<group>"; };
+		3836FCE922EFA194002C07EE /* PurchasedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedTableViewCell.swift; sourceTree = "<group>"; };
+		3836FCEB22EFA1BB002C07EE /* ClassSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchTableViewCell.swift; sourceTree = "<group>"; };
+		3836FCEF22EFA36B002C07EE /* PurchasedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedTableViewController.swift; sourceTree = "<group>"; };
+		3836FCF122EFA397002C07EE /* PurchasedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedDetailViewController.swift; sourceTree = "<group>"; };
+		3836FCF622EFA47B002C07EE /* AddClassPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassPackViewController.swift; sourceTree = "<group>"; };
+		3836FCFB22EFAC28002C07EE /* ClassPackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPackTableViewController.swift; sourceTree = "<group>"; };
+		3836FCFD22EFAC8C002C07EE /* ClassPackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPackTableViewCell.swift; sourceTree = "<group>"; };
 		38D2851A22EDFB4400B1A232 /* AnywhereFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnywhereFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2851D22EDFB4400B1A232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38D2851F22EDFB4400B1A232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38D2852222EDFB4400B1A232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38D2852422EDFB4600B1A232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38D2852722EDFB4600B1A232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,10 +67,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3836FCDA22EF9BC1002C07EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCD622EF9BA2002C07EE /* Trainer.swift */,
+				3836FCD822EF9BB9002C07EE /* Client.swift */,
+				3836FCDB22EF9CA8002C07EE /* ClassPack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3836FCED22EFA1C1002C07EE /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCE922EFA194002C07EE /* PurchasedTableViewCell.swift */,
+				3836FCEB22EFA1BB002C07EE /* ClassSearchTableViewCell.swift */,
+				3836FCFD22EFAC8C002C07EE /* ClassPackTableViewCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		3836FCEE22EFA1EF002C07EE /* Client VC's */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCF822EFA491002C07EE /* Login VC's */,
+				3836FCE522EF9E4D002C07EE /* ClassSearchViewController.swift */,
+				3836FCE722EF9E6B002C07EE /* ClassSearchDetailViewController.swift */,
+				3836FCEF22EFA36B002C07EE /* PurchasedTableViewController.swift */,
+				3836FCF122EFA397002C07EE /* PurchasedDetailViewController.swift */,
+			);
+			path = "Client VC's";
+			sourceTree = "<group>";
+		};
+		3836FCF322EFA44E002C07EE /* Trainer VC's */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCF922EFA49D002C07EE /* Login VC's */,
+				3836FCF622EFA47B002C07EE /* AddClassPackViewController.swift */,
+				3836FCFB22EFAC28002C07EE /* ClassPackTableViewController.swift */,
+			);
+			path = "Trainer VC's";
+			sourceTree = "<group>";
+		};
+		3836FCF822EFA491002C07EE /* Login VC's */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCDD22EF9DB5002C07EE /* ClientLoginViewController.swift */,
+				3836FCDF22EF9DCB002C07EE /* ClientSignUpViewController.swift */,
+			);
+			path = "Login VC's";
+			sourceTree = "<group>";
+		};
+		3836FCF922EFA49D002C07EE /* Login VC's */ = {
+			isa = PBXGroup;
+			children = (
+				3836FCE122EF9DDB002C07EE /* TrainerLoginViewController.swift */,
+				3836FCE322EF9E06002C07EE /* TrainerSignUpViewController.swift */,
+			);
+			path = "Login VC's";
+			sourceTree = "<group>";
+		};
+		3836FCFA22EFA4B2002C07EE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				38D2852122EDFB4400B1A232 /* Main.storyboard */,
+				38D2852622EDFB4600B1A232 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		38D2851122EDFB4400B1A232 = {
 			isa = PBXGroup;
 			children = (
 				38D2851C22EDFB4400B1A232 /* AnywhereFitness */,
+				38D2852422EDFB4600B1A232 /* Assets.xcassets */,
+				38D2852922EDFB4600B1A232 /* Info.plist */,
 				38D2851B22EDFB4400B1A232 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,11 +159,11 @@
 			children = (
 				38D2851D22EDFB4400B1A232 /* AppDelegate.swift */,
 				38D2852F22EE409700B1A232 /* ColorKey.swift */,
-				38D2851F22EDFB4400B1A232 /* ViewController.swift */,
-				38D2852122EDFB4400B1A232 /* Main.storyboard */,
-				38D2852422EDFB4600B1A232 /* Assets.xcassets */,
-				38D2852622EDFB4600B1A232 /* LaunchScreen.storyboard */,
-				38D2852922EDFB4600B1A232 /* Info.plist */,
+				3836FCFA22EFA4B2002C07EE /* Storyboard */,
+				3836FCDA22EF9BC1002C07EE /* Model */,
+				3836FCEE22EFA1EF002C07EE /* Client VC's */,
+				3836FCF322EFA44E002C07EE /* Trainer VC's */,
+				3836FCED22EFA1C1002C07EE /* Custom Views */,
 			);
 			path = AnywhereFitness;
 			sourceTree = "<group>";
@@ -138,9 +239,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D2852022EDFB4400B1A232 /* ViewController.swift in Sources */,
+				3836FCD722EF9BA2002C07EE /* Trainer.swift in Sources */,
+				3836FCE422EF9E06002C07EE /* TrainerSignUpViewController.swift in Sources */,
+				3836FCF022EFA36B002C07EE /* PurchasedTableViewController.swift in Sources */,
+				3836FCE222EF9DDB002C07EE /* TrainerLoginViewController.swift in Sources */,
+				3836FCDE22EF9DB5002C07EE /* ClientLoginViewController.swift in Sources */,
+				3836FCF722EFA47B002C07EE /* AddClassPackViewController.swift in Sources */,
 				38D2851E22EDFB4400B1A232 /* AppDelegate.swift in Sources */,
+				3836FCFE22EFAC8C002C07EE /* ClassPackTableViewCell.swift in Sources */,
+				3836FCFC22EFAC28002C07EE /* ClassPackTableViewController.swift in Sources */,
+				3836FCEA22EFA194002C07EE /* PurchasedTableViewCell.swift in Sources */,
+				3836FCD922EF9BB9002C07EE /* Client.swift in Sources */,
+				3836FCE822EF9E6B002C07EE /* ClassSearchDetailViewController.swift in Sources */,
 				38D2853022EE409700B1A232 /* ColorKey.swift in Sources */,
+				3836FCF222EFA397002C07EE /* PurchasedDetailViewController.swift in Sources */,
+				3836FCEC22EFA1BB002C07EE /* ClassSearchTableViewCell.swift in Sources */,
+				3836FCE622EF9E4D002C07EE /* ClassSearchViewController.swift in Sources */,
+				3836FCE022EF9DCB002C07EE /* ClientSignUpViewController.swift in Sources */,
+				3836FCDC22EF9CA8002C07EE /* ClassPack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
