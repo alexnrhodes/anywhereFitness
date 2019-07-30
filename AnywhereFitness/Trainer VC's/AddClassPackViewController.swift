@@ -12,6 +12,24 @@ protocol addClassPackDelegate {
     func classWasAdded(_ oneClass: ClassPack)
 }
 
+enum ClassCategory: Int, CaseIterable {
+    
+    case HIIT
+    case Zumba
+    case Parkour
+    case Yoga
+    case CrossTraining
+    
+    var description: String {
+        switch self {
+        case .HIIT: return "HIIT"
+        case .Zumba: return "Zumba"
+        case .Parkour: return "Parkour"
+        case .Yoga: return "Yoga"
+        case .CrossTraining: return "Cross Training"
+        }
+    }
+}
 
 class AddClassPackViewController: UIViewController {
     
@@ -22,7 +40,7 @@ class AddClassPackViewController: UIViewController {
     
     var delegate: addClassPackDelegate?
     
-    var classCategory: ClassCategory?
+    var showMenu = false
     
     
     override func viewDidLoad() {
@@ -34,26 +52,46 @@ class AddClassPackViewController: UIViewController {
     }
     
     @objc func handleDropDown() {
-        print("Drop down menu")
+        
+        showMenu = !showMenu
+        
+        var indexPaths = [IndexPath]()
+        
+        ClassCategory.allCases.forEach { (description) in
+            let indexPath = IndexPath(row: description.rawValue, section: 0)
+            indexPaths.append(indexPath)
+        }
+        
+        if showMenu {
+            classCategoryTableView.insertRows(at: indexPaths, with: .fade)
+        } else {
+            classCategoryTableView.deleteRows(at: indexPaths, with: .fade)
+        }
     }
     func categoryTableViewConfiguration() {
         classCategoryTableView = UITableView()
         classCategoryTableView.delegate = self
         classCategoryTableView.dataSource = self
         view.addSubview(classCategoryTableView)
+        
+        classCategoryTableView.register(DropDownTableViewCell.self, forCellReuseIdentifier: "CateoryCell")
+
     }
     
     @IBAction func saveClassButtonPressed(_ sender: UIButton) {
         guard let addNewClassPackName = classNameTextField.text, !addNewClassPackName.isEmpty,
-            let addClassDescription = classDescriptionTextView.text, !addClassDescription.isEmpty else {return}
+            let addClassDescription = classDescriptionTextView.text, !addClassDescription.isEmpty,
+         let addClassCategory = classCategory else {return}
         
-        //        let classPack = ClassPack(name: addNewClassPackName, category: addClassCategory, description: addClassDescription)
-        //
-        //       delegate?.classWasAdded(classPack)
+                let classPack = ClassPack(name: addNewClassPackName, category: addClassCategory, description: addClassDescription)
+        
+               delegate?.classWasAdded(classPack)
     }
 }
 
 extension AddClassPackViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let button = UIButton(type: .system)
@@ -62,25 +100,24 @@ extension AddClassPackViewController: UITableViewDelegate, UITableViewDataSource
         button.titleLabel?.textAlignment = .left
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleDropDown), for: .touchUpInside)
-        
-        tableView.register(DropDownTableViewCell.self, forCellReuseIdentifier: "CateoryCell")
-        
+            
         button.backgroundColor = .darkGray
         
         return button
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return showMenu ? ClassCategory.allCases.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CateoryCell", for: indexPath) as? DropDownTableViewCell else {return UITableViewCell()}
 
-         cell.categoryTitleLabel.text = classCategory?.hashValue.description
+        cell.categoryTitleLabel.text = ClassCategory(rawValue: indexPath.row)?.description
         
      return cell
     }
     
     
 }
+

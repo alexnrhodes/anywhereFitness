@@ -23,7 +23,7 @@
 		3836FCFE22EFAC8C002C07EE /* ClassPackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FCFD22EFAC8C002C07EE /* ClassPackTableViewCell.swift */; };
 		3836FD0422F0B46A002C07EE /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FD0322F0B46A002C07EE /* DropDownCell.swift */; };
 		3836FD0622F0D97B002C07EE /* ClassPackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FD0522F0D97B002C07EE /* ClassPackController.swift */; };
-		3836FD0822F0EF2F002C07EE /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FD0722F0EF2F002C07EE /* enum.swift */; };
+		3836FD0822F0EF2F002C07EE /* ClassCategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FD0722F0EF2F002C07EE /* ClassCategoryEnum.swift */; };
 		3836FD0A22F0F256002C07EE /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836FD0922F0F256002C07EE /* DropDownTableViewCell.swift */; };
 		38D2851E22EDFB4400B1A232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2851D22EDFB4400B1A232 /* AppDelegate.swift */; };
 		38D2852322EDFB4400B1A232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2852122EDFB4400B1A232 /* Main.storyboard */; };
@@ -49,7 +49,7 @@
 		3836FCFD22EFAC8C002C07EE /* ClassPackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPackTableViewCell.swift; sourceTree = "<group>"; };
 		3836FD0322F0B46A002C07EE /* DropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		3836FD0522F0D97B002C07EE /* ClassPackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPackController.swift; sourceTree = "<group>"; };
-		3836FD0722F0EF2F002C07EE /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
+		3836FD0722F0EF2F002C07EE /* ClassCategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategoryEnum.swift; sourceTree = "<group>"; };
 		3836FD0922F0F256002C07EE /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
 		38D2851A22EDFB4400B1A232 /* AnywhereFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnywhereFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2851D22EDFB4400B1A232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			children = (
 				3836FCDB22EF9CA8002C07EE /* ClassPack.swift */,
 				3836FD0522F0D97B002C07EE /* ClassPackController.swift */,
-				3836FD0722F0EF2F002C07EE /* enum.swift */,
+				3836FD0722F0EF2F002C07EE /* ClassCategoryEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				3836FCE622EF9E4D002C07EE /* ClassSearchViewController.swift in Sources */,
 				3836FCE022EF9DCB002C07EE /* ClientSignUpViewController.swift in Sources */,
 				3836FCDC22EF9CA8002C07EE /* ClassPack.swift in Sources */,
-				3836FD0822F0EF2F002C07EE /* enum.swift in Sources */,
+				3836FD0822F0EF2F002C07EE /* ClassCategoryEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
