@@ -8,15 +8,17 @@
 
 import Foundation
 
-class Class {
+var classCategory: ClassCategory?
+
+struct ClassPack: Equatable {
     var name: String
-    var category: String
+    var category: ClassCategory
     var description: String
     
-    init(name: String, category: String, description: String) {
+    init(name: String, category: ClassCategory, description: String) {
         self.name = name
         self.category = category
         self.description = description
-        
+
     }
 }

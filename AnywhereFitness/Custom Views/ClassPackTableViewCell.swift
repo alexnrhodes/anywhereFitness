@@ -13,9 +13,15 @@ class ClassPackTableViewCell: UITableViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    var oneClass: ClassPack? {
+        didSet {
+            
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     @IBAction func editClassButtonPressed(_ sender: UIButton) {
