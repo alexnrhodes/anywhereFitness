@@ -14,6 +14,7 @@ class TrainerSignUpViewController: UIViewController {
     @IBOutlet weak var trainerEmailTextField: UITextField!
     @IBOutlet weak var trainerPasswordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -12,10 +12,10 @@ var classCategory: ClassCategory?
 
 struct ClassPack: Equatable {
     var name: String
-    var category: ClassCategory
+    var category: String
     var description: String
     
-    init(name: String, category: ClassCategory, description: String) {
+    init(name: String, category: String, description: String) {
         self.name = name
         self.category = category
         self.description = description

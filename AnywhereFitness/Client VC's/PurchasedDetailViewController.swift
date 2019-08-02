@@ -9,22 +9,31 @@
 import UIKit
 
 class PurchasedDetailViewController: UIViewController {
+    
+    @IBOutlet weak var classesRemainingLabel: UILabel!
+    
+    var classPackController: ClassPackController?
+   
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        updateViews()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateViews() {
+    
     }
-    */
-
+    @IBAction func usePassButtonTapped(_ sender: UIButton) {
+        var passesAvailable = 10
+        
+        if sender.isSelected == true { passesAvailable -= 1 }
+//        } else if passesAvailable == 1 {
+//            _ = UIAlertAction(title: "Oh no! You have run out of classes!", style: .cancel, handler: nil)
+//        }
+       classesRemainingLabel.text = "You have \(passesAvailable) remaining!"
+    }
+    
 }

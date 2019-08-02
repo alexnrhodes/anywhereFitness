@@ -13,18 +13,16 @@ class PurchasedTableViewCell: UITableViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var instructorNameLabel: UILabel!
     
+    var classPack: ClassPack?
+    
+    var trainer: Trainer?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    @IBAction func detailsButtonTapped(_ sender: UIButton) {
-    }
+        
+        classNameLabel.text = classPack?.name
+        instructorNameLabel.text = trainer?.name
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

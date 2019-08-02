@@ -23,9 +23,11 @@ class DropDownTableViewCell: UITableViewCell {
         addSubview(categoryTitleLabel)
         categoryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         categoryTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        categoryTitleLabel.textAlignment = .left
+        categoryTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

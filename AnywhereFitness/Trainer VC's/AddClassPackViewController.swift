@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol addClassPackDelegate {
-    func classWasAdded(_ oneClass: ClassPack)
-}
-
 enum ClassCategory: Int, CaseIterable {
     
     case HIIT
@@ -35,12 +31,19 @@ class AddClassPackViewController: UIViewController {
     
    
     @IBOutlet weak var classNameTextField: UITextField!
-    @IBOutlet var classCategoryTableView: UITableView!
     @IBOutlet weak var classDescriptionTextView: UITextView!
     
-    var delegate: addClassPackDelegate?
+    
     
     var showMenu = false
+    
+    var classPackController: ClassPackController?
+    
+    var classCategoryTableView: UITableView!
+    
+    var classCategory: ClassCategory?
+    
+    let categoryLabel = UILabel()
     
     
     override func viewDidLoad() {
@@ -48,8 +51,19 @@ class AddClassPackViewController: UIViewController {
         
         categoryTableViewConfiguration()
         
+        view.addSubview(categoryLabel)
+        
+        categoryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        categoryLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 32).isActive = true
+        categoryLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        categoryLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        
         // Aesthtics maybe after you finish coding. Must add an outlet for button.
     }
+    
+   
+    
+    // MARK: Dropdown Menu Shit
     
     @objc func handleDropDown() {
         
@@ -68,26 +82,42 @@ class AddClassPackViewController: UIViewController {
             classCategoryTableView.deleteRows(at: indexPaths, with: .fade)
         }
     }
+    
     func categoryTableViewConfiguration() {
         classCategoryTableView = UITableView()
         classCategoryTableView.delegate = self
         classCategoryTableView.dataSource = self
-        view.addSubview(classCategoryTableView)
+        classCategoryTableView.translatesAutoresizingMaskIntoConstraints = false
+        classCategoryTableView.separatorStyle = .none
+       classCategoryTableView.isScrollEnabled = false
+        classCategoryTableView.rowHeight = 50
         
         classCategoryTableView.register(DropDownTableViewCell.self, forCellReuseIdentifier: "CateoryCell")
 
+        view.addSubview(classCategoryTableView)
+        
+        classCategoryTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160).isActive = true
+        classCategoryTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        classCategoryTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        classCategoryTableView.heightAnchor.constraint(equalToConstant: 280).isActive = true
     }
+    
+    // MARK: Button Actions
     
     @IBAction func saveClassButtonPressed(_ sender: UIButton) {
         guard let addNewClassPackName = classNameTextField.text, !addNewClassPackName.isEmpty,
             let addClassDescription = classDescriptionTextView.text, !addClassDescription.isEmpty,
-         let addClassCategory = classCategory else {return}
+            let classCategory = categoryLabel.text else {return}
         
-                let classPack = ClassPack(name: addNewClassPackName, category: addClassCategory, description: addClassDescription)
+        classPackController?.createClassPack(name: addNewClassPackName, category: classCategory, description: addClassDescription)
         
-               delegate?.classWasAdded(classPack)
+        dismiss(animated: true, completion: nil) //trying to make it go back to previous VC
+       
     }
 }
+
+
+// MARK: Dropdown Menu Shit
 
 extension AddClassPackViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -97,10 +127,8 @@ extension AddClassPackViewController: UITableViewDelegate, UITableViewDataSource
         let button = UIButton(type: .system)
         button.setTitle("Select Category", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.titleLabel?.textAlignment = .left
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleDropDown), for: .touchUpInside)
-            
         button.backgroundColor = .darkGray
         
         return button
@@ -114,10 +142,18 @@ extension AddClassPackViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CateoryCell", for: indexPath) as? DropDownTableViewCell else {return UITableViewCell()}
 
         cell.categoryTitleLabel.text = ClassCategory(rawValue: indexPath.row)?.description
+        cell.backgroundColor = UIColor.black
         
      return cell
     }
-    
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       guard let description = ClassCategory(rawValue: indexPath.row)?.description else {return}
+        
+        categoryLabel.text = description
+        tableView.reloadData()
+
+    }
     
 }
 

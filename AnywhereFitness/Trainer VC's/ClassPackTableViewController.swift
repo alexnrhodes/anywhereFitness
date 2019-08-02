@@ -10,49 +10,54 @@ import UIKit
 
 class ClassPackTableViewController: UITableViewController {
     
-    var classPackArray: [ClassPack] = []
+    var classPackController = ClassPackController()
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor.black
+        
+        tableView.reloadData()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.backgroundColor = UIColor.black
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
-
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classPackArray.count
+        return classPackController.classPacks.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClassPackCell", for: indexPath) as? ClassPackTableViewCell else {return UITableViewCell()}
         
-        let classes = classPackArray[indexPath.row]
-        cell.oneClass = classes
-    
-
-
+        let classes = classPackController.classPacks[indexPath.row]
+        cell.classPack = classes
+        
+        
+        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddClassDetailSegue" {
-            if let addClassPack = segue.destination as? AddClassPackViewController {
-                addClassPack.delegate = self
+            if let addClassPackVC = segue.destination as? AddClassPackViewController {
+                addClassPackVC.classPackController = classPackController
             }
         }
-    
+        if segue.identifier == "EditClassDetailSegue" {
+            if let addClassPackVC = segue.destination as? AddClassPackViewController {
+                addClassPackVC.classPackController = classPackController
+            }
+        }
     }
-
-}
-extension ClassPackTableViewController: addClassPackDelegate {
-    func classWasAdded(_ oneClass: ClassPack) {
-        classPackArray.append(oneClass)
-        dismiss(animated: true, completion: nil)
-        tableView.reloadData()
-    }
-    
     
 }

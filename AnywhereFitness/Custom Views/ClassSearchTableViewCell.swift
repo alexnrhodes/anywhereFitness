@@ -11,20 +11,26 @@ import UIKit
 class ClassSearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var classNameLabel: UILabel!
-    @IBOutlet weak var instructorNameLabel: UILabel!
+    @IBOutlet weak var classCategoryLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    var classCategory: ClassCategory?
+    var classPackController: ClassPackController?
+    var classPack: ClassPack? {
+        didSet {
+            updateViews()
+        }
     }
+    
+    func updateViews() {
+        
+        classNameLabel.text = classPack?.name
+        classCategoryLabel.text = classCategory?.description
+    }
+
 
     @IBAction func detailsButtonTapped(_ sender: UIButton) {
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

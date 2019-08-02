@@ -13,24 +13,22 @@ class ClassPackTableViewCell: UITableViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     
-    var oneClass: ClassPack? {
+    var classPackController: ClassPackController?
+    
+    var classPack: ClassPack? {
         didSet {
-            
+            updateView()
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       
-    }
-
-    @IBAction func editClassButtonPressed(_ sender: UIButton) {
+    func updateView() {
+        guard let classPack = classPack else {return}
+        
+        categoryLabel.textColor = UIColor.white
+        classNameLabel.textColor = UIColor.white
+        classNameLabel.text = classPack.name
+        categoryLabel.text = classPack.category
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
